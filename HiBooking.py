@@ -138,5 +138,3 @@ if user_input:
 
         count +=1
 
-
-
