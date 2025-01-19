@@ -12,7 +12,7 @@ st.markdown("""
 <style>
 .big-font {
     font-size:20px !important;
-}
+}C
 </style>
 """, unsafe_allow_html=True)
 
