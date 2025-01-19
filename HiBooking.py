@@ -8,6 +8,7 @@ from openai import OpenAI
 api_key = st.secrets["openai_apikey"]
 assistant_id = st.secrets["assistant_id"]
 
+
 st.markdown("""
 <style>
 .big-font {
@@ -110,8 +111,9 @@ st.text_input("How can I help?", key='query', on_change=submit)
 
 user_input = st.session_state.user_input
 
-st.markdown(f":green-background[**You**: {user_input}]")
+st.markdown(f"**You**\n\n :green-background[ {user_input}]")
 
+st.markdown('\n\n')
 
 if user_input:
     result = get_assistant_response(user_input)
@@ -127,15 +129,15 @@ if user_input:
 
         if r[1] == "assistant":
             if count == 0:
-                st.markdown(f":red-background[**Jono**: {Content_message}]")
+                st.markdown(f"**Jono**\n\n :red-background[{Content_message}]")
             else:
-                st.markdown(f":grey[**Jono**: {Content_message}]")
+                st.markdown(f":grey[ **Jono** : {Content_message}]")
 
         else:
             if count == 1:
                 st.header(' ', divider='grey')
             else:
-                st.markdown(f"**You**: :blue[{Content_message}]")
+                st.markdown(f" **You**: :blue[{Content_message}]")
 
         count +=1
 
