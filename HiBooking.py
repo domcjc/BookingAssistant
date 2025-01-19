@@ -127,7 +127,7 @@ if user_input:
 
         if r[1] == "assistant":
             if count == 0:
-                st.write(f":red-background[**Jono**: {Content_message}]")
+                st.markdown(f":red-background[**Jono**: {Content_message}]")
             else:
                 st.markdown(f":grey[**Jono**: {Content_message}]")
 
