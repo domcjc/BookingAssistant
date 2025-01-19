@@ -5,8 +5,8 @@ import openai
 from openai import OpenAI
 
 #Set OpenAI api & assistant ID
-api_key = "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"
-assistant_id = "asst_ErpNupkB9mW5AlM8jWJjMZWq"
+api_key = st.secrets["openai_apikey"]
+assistant_id = st.secrets["assistant_id"]
 
 st.markdown("""
 <style>
